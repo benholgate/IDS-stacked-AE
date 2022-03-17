@@ -12,9 +12,9 @@ I developed a stacked autoencoder (SAE), which is an unsupervised deep neural ne
 The SAE in the has input layer with 152 inputs (the number of prediction features), followed by a hidden layer (or encoder) with 100 neurons, a central hidden layer of 50 neurons, another hidden layer (or decoder) with 100 neurons, 
 and finally an output layer with 152 neurons.  
 ## Feature Selection
-The SAE performed automatic feature extraction to reduce the dimensions of the processed data. The 152 features from both the AWID’s training and testing data sets were fed into the SAE. As a result, 
-the SAE extracted an additional 50 new features with new data instances that were appended to both the original training and testing sets. This resulted in a larger data set with 202 features.
-A feature importance technique, the Extremely Randomized Trees Classifier (ExtraTreesClassifier), was used to determine the most relevant features from the combined data set. The feature selection was set to identify the top 20 features from the combined data set.
+The SAE performed automatic feature extraction to reduce the dimensions of the processed data. The 152 features from both the AWID’s training and testing datasets were fed into the SAE. As a result, 
+the SAE extracted an additional 50 new features with new data instances that were appended to both the original training and testing sets. This resulted in a larger dataset with 202 features.
+A feature importance technique, the Extremely Randomized Trees Classifier (ExtraTreesClassifier), was used to determine the most relevant features from the combined dataset. The feature selection was set to identify the top 20 features from the combined dataset.
 Around half of these top 20 features were abstract features from the new training set, which suggests that the SAE was able to successfully extract features that are relevant to the attack class with 
 meaningful representations.
 ## Hyperparameter Tuning
@@ -26,4 +26,4 @@ relu activation;
 binary cross-entropy loss function;
 0.001 learning rate.
 ## Classification Algorithms
-Logistic Regression (LR) and Support Vector Machines (SVM) resulted in the highest accuracy rates, of just over 98%, although LR was musch faster in terms of time taken to build the model. The LR-SAE and SVM-SAE models performed as well as other studies on the AWID database in regard to accuracy.
+Logistic Regression (LR) and Support Vector Machines (SVM) resulted in the highest accuracy rates, of just over 98%, although LR was much faster in terms of time taken to build the model. The LR-SAE and SVM-SAE models performed as well as other studies on the AWID database in regard to accuracy.
